@@ -32,6 +32,9 @@ h1,
 h2,
 h3 {
   font-family: "Bebas Neue";
+  text-decoration: underline;
+  text-transform: uppercase;
+letter-spacing: 3px;
 }
 
 img {
@@ -39,6 +42,7 @@ img {
   height: 20rem;
   background-color: var(--primaryColor);
 }
+/* Metode1 samlet regler (som puttes inn i classes)*/
 
 .flexTrueCenter{
   display: flex;
@@ -46,11 +50,44 @@ img {
   justify-content: center;
 }
 
+/* metode 1 samlet regler(som puttes inn i classes) */
+
+/* Metode 2 separerte regler(som puttes inn i classes) */
+
+.flex{
+  display: flex;
+}
+
+.flexAlignCenter{
+  align-items: center;
+}
+
+.flexJustifyContent{
+  justify-content: center;
+}
+
+.lineDivider{
+  border: 1px solid var(--secondaryColor); margin-inline: -1.6rem;
+}
+
+.backgroundColor{
+  background-color: var(--accentPrimColor); margin-inline: -1.6rem;
+  padding: 1.6rem;
+}
+
+.featureText{
+  color: var(--secondaryColor); 
+  text-decoration: underline;
+}
+
+/* Metode 2 Separerte regler (som puttes inn i classes) */
+
+
 /* HEADER */
 .header {
   position: sticky;
   top: 0;
-  background-color: var(--lightColor);
+  /* background-color: var(--lightColor); */
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -64,13 +101,15 @@ img {
   list-style-type: none;
 }
 
-.navList a {
+ a {
   text-decoration: none;
   cursor: pointer; /* Skjer automatisk, ikke nødvendig å ha med */
   color: var(--secondaryColor);
 }
 
-.navList a:hover {
+/* ALLE Anchors(ALle "a" element i html) */
+
+ a:hover {
   text-decoration: underline;
   color: var(--accentSecColor);
 }
@@ -180,9 +219,10 @@ img {
 /* FOOTER */
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 1.6rem;
   font-weight: bold;
+  align-items: center;
 }
 
 /* MEDIA QUERY */
